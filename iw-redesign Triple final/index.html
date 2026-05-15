@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiring Women | Personality Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="logo-wordmark" onclick="showHero()" style="cursor:pointer">
+                <span class="logo-text">Inspiring<em>Women</em></span>
+            </div>
+            <div class="nav-links">
+                <a href="javascript:void(0)" onclick="startAssessment()">Personality Test</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Personality Types <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+                    <div class="dropdown-content" id="types-menu"></div>
+                </div>
+            </div>
+            <button class="nav-cta" onclick="startAssessment()">Begin Test</button>
+        </div>
+    </nav>
+
+    <section id="hero-section">
+        <div class="hero-bg">
+            <div class="hero-blob blob-1"></div>
+            <div class="hero-blob blob-2"></div>
+            <div class="hero-blob blob-3"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-brand">
+                <img src="assets/logo.png" alt="Inspiring Women" class="hero-logo-img">
+            </div>
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Pakistani Women Personality Assessment
+                </div>
+                <h1 class="hero-headline">
+                    <em>Finally</em> understood<br>for who you truly are.
+                </h1>
+                <p class="hero-subtext">
+                    Discover your unique personality type through a thoughtful assessment — and see yourself reflected in remarkable Pakistani women who share your strengths and spirit.
+                </p>
+                <div class="hero-cta-row">
+                    <button class="btn-primary-hero" onclick="startAssessment()">
+                        <span>Begin Your Journey</span>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="hero-note">32 questions &middot; ~5 minutes</span>
+                </div>
+            </div>
+            <div class="hero-steps">
+                <div class="step-pill">
+                    <div class="step-num-pill">01</div>
+                    <div class="step-info"><strong>Reflect Honestly</strong><span>Answer as you are, not as you wish to be</span></div>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step-pill">
+                    <div class="step-num-pill">02</div>
+                    <div class="step-info"><strong>Get Analyzed</strong><span>4 dimensions mapped across your answers</span></div>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step-pill">
+                    <div class="step-num-pill">03</div>
+                    <div class="step-info"><strong>Discover Yourself</strong><span>Your full personality profile revealed now</span></div>
+                </div>
+            </div>
+
+            <div class="site-credit" style="margin-top:48px;"><span>designed &amp; built by mariyam shoab</span></div>
+        </div>
+    </section>
+
+    <section id="quiz-section" class="hidden">
+        <div class="quiz-progress-bar-wrap">
+            <div class="quiz-progress-info">
+                <span class="progress-label">Assessment Progress</span>
+                <span class="progress-count" id="progress-count">0 / 32</span>
+            </div>
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+        <div class="quiz-container">
+            <form id="quiz-form">
+                <div id="questions-container"></div>
+                <div class="quiz-footer">
+                    <div class="quiz-footer-note">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#6b00b3" stroke-width="1.5"/><path d="M8 7V11M8 5.5V5" stroke="#6b00b3" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        Please answer all questions before submitting
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span>Reveal My Personality</span>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="result-section" class="hidden">
+        <div id="result-content"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
